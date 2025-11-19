@@ -1,0 +1,109 @@
+/* ESTILOS GLOBALES Y RESET */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Fondo gris claro */
+    color: #333;
+}
+
+/* CONTENEDOR PRINCIPAL (LAYOUT FLEXBOX) */
+.main-container {
+    display: flex; /* Habilita el layout flexible */
+    max-width: 1200px;
+    margin: 40px auto; /* Centra el contenedor en la página */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que la sombra y borde se vean bien */
+    background-color: #ffffff;
+}
+
+/* 1. BARRA LATERAL (ASIDE) */
+.sidebar {
+    width: 300px; /* Ancho fijo para la barra lateral */
+    background-color: #eef1f3; /* Fondo más oscuro para la barra */
+    padding: 30px 20px;
+    flex-shrink: 0; /* Evita que la barra se encoja */
+    border-right: 1px solid #ddd;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #333;
+}
+
+.profile-info h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #0056b3; /* Color azul para el nombre */
+}
+
+.title {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* NAVEGACIÓN */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    color: #0056b3;
+    background-color: #ddf0ff;
+    border-left: 3px solid #0056b3; /* Indicador visual de la página activa */
+    padding-left: 10px;
+}
+
+/* 2. CONTENIDO PRINCIPAL (MAIN) */
+.content {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    padding: 40px;
+}
+
+.about-me h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre las etiquetas */
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background-color: #0056b3;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+blockquote {
+    border-left: 4px solid #0056b3;
+    padding-left: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+}
